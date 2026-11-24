@@ -1,0 +1,8 @@
+librosa
+numpy
+scipy
+soundfile
+streamlit
+pretty_midi
+mir_eval
+pytest

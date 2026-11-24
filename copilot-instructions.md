@@ -1,6 +1,6 @@
 # Copilot Instructions
 
-Hum-to-Notes is a Python class project. A user hums a melody; the app transcribes it into notes (pitch and duration), plays them back, and exports MIDI. Sheet music (MusicXML) and note editing come in a later phase.
+Hummify is a Python class project. A user hums a melody; the app transcribes it into notes (pitch and duration), plays them back, and exports MIDI. Sheet music (MusicXML) and note editing come in a later phase.
 
 **Current phase:** 1 (basic prototype: record or upload, pYIN, semitone snapping, list of notes). Do not build later-phase features unless asked. Update this line as phases finish.
 
@@ -42,6 +42,7 @@ Python 3.11+, Streamlit (UI), `librosa` (pYIN pitch tracking), `numpy`, `soundfi
 
 ## Tests
 
+- Use standard `pytest` or Python's built-in `unittest`; do not add or rely on BYU-specific tools or plugins.
 - Write or update a pytest test for every function you change.
 - Use synthetic audio (generated tones with known pitch and length) in unit tests, not recordings.
 - Evaluation uses `mir_eval.transcription` with 50 ms onset and 50 cent pitch tolerance. Report precision, recall, and F1.

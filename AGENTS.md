@@ -2,11 +2,11 @@
 
 ## Project
 
-Hum-to-Notes is a class project. The user hums a melody (recorded in the browser or uploaded as WAV/MP3). The app transcribes it into notes with pitch and duration, plays the notes back, and exports MIDI. Later phases add sheet music (MusicXML) and note editing.
+Hummify is a class project. The user hums a melody (recorded in the browser or uploaded as WAV/MP3). The app transcribes it into notes with pitch and duration, plays the notes back, and exports MIDI. Later phases add sheet music (MusicXML) and note editing.
 
 The design document is the source of truth for scope and decisions. If a task conflicts with it, ask before changing direction.
 
-**Current phase:** 1 (basic prototype). Update this line as phases finish.
+**Current phase:** 3 (evaluation script and baseline setup). Update this line as phases finish.
 
 | Phase | Scope |
 |---|---|
@@ -78,6 +78,7 @@ Run `pytest` and the evaluation script after any change to `pitch`, `segment`, o
 
 ## Testing and evaluation
 
+- Use standard `pytest` or Python's built-in `unittest`; do not add or rely on BYU-specific tools or plugins.
 - Add or update a test in `tests/` for every function you change.
 - Use synthetic audio (generated sine tones with known pitches and durations) for unit tests, so tests do not depend on recordings.
 - The evaluation script uses `mir_eval.transcription` with a 50 ms onset tolerance and 50 cent pitch tolerance. Report precision, recall, and F1.
